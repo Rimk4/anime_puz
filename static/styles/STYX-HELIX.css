@@ -5,7 +5,10 @@ button {
 select {
   font-size: inherit;
 }
-
+img {
+  height: 100%;
+  width: auto;
+}
 body{
   align-items: center;
   font-size: 2vw;
