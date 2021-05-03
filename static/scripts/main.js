@@ -41,7 +41,10 @@ start.onclick = () => {
 //The main function - init().
 function init(){
   // Some variables.
-  let arr, source, k, size;
+  let arr, source, k, size, clicks, start;
+  let URL = document.getElementById("url").innerHTML;
+  let ctx2 = aux_holst.getContext('2d'),
+      ctx = pyatnashki.getContext("2d");
 
   function define_arr(){
     if (difficulty[difficulty.selectedIndex].value == 'easy'){
@@ -63,6 +66,8 @@ function init(){
 
   function prepare(){
     define_arr();
+    clicks = 0;
+    start = time();
     size = [pyatnashki.width / k, pyatnashki.height / k];
     ctx.font = JSON.stringify(Math.floor(Math.min(size[0], size[1])/10))+'px Verdana';
     ctx2.drawImage(img, 0, 0);
@@ -108,12 +113,6 @@ function init(){
     arr[getNull().y][getNull().x] = arr[0][0];
     arr[0][0] = 0;
   };
-
-  let start = time();
-  let clicks = 0;
-  let URL = document.getElementById("url").innerHTML;
-  let ctx2 = aux_holst.getContext('2d'),
-      ctx = pyatnashki.getContext("2d");
 
   function draw(){
     for (let i = 0; i < k; i++){
@@ -177,7 +176,6 @@ function init(){
   pyatnashki.onclick = function(e) {
     let x = (e.pageX - getOffset(pyatnashki).left) / size[0] | 0;
     let y = (e.pageY - getOffset(pyatnashki).top) / size[1] | 0;
-
     event(x, y);
   }
 
@@ -213,6 +211,7 @@ function init(){
 
   choose.onclick = function (){
     prepare();
+    counter.textContent = counter.textContent.split(" ").slice(0, -1) + " " + clicks;
   };
 
   save.onclick = () => {
