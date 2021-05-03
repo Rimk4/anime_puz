@@ -1,7 +1,7 @@
 from flask import Flask, render_template
 import requests
 import json
-import socket
+import os
 
 
 app = Flask(__name__)
@@ -15,6 +15,5 @@ def inv():
 
 
 if __name__ == '__main__':
-    ip = socket.gethostbyname(socket.gethostname())
-    print(ip)
-    app.run(port=8080, host=ip)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
