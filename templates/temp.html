@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>15 Anime Puzzles</title>
+  <link rel="stylesheet" href="../static/styles/STYX-HELIX.css"></link>
+  <style>
+    @import url("/styles/default.css");
+</style>
+</head>
+<body>
+  <div class="container">
+    <button id="start"  >Start</button>
+  </div>
+  <div id="menu" style="display: none">
+    <div>Picture's link address: <a id="url" href="{{ url_ }}">{{ url_ }}</a></div>
+    <div align="center">
+      <div>
+        <p id="counter_clicks">Clicks: 0</p>
+      </div>
+      <div>
+        <button   id="show orig">Show original</button>
+        <div>
+          <button   id="num">Show numbers</button>
+          <div id="rgb-slider" style="display: none">
+            <fieldset>
+              <label for="r">R</label>
+              <input type="range" min="0" max="255" id="r" step="1" value="0">
+              <output for="r" id="r_out">0</output>
+            </fieldset>  
+
+            <fieldset>
+              <label for="g">G</label>
+              <input type="range" min="0" max="255" id="g" step="1" value="0">
+              <output for="g" id="g_out">0</output>
+            </fieldset>
+
+            <fieldset>
+              <label for="b">B</label>
+              <input type="range" min="0" max="255" id="b" step="1" value="0">
+              <output for="b" id="b_out">0</output>
+            </fieldset>  
+
+            <output id="hex" style="display: none">#000000</output>
+          </div>
+          <div class="colors_act" style="display: none">
+            <button  class="btn btn-lg  btn-outline-secondary" id="save color">Save Color</button>
+            <button  class="btn btn-lg  btn-outline-secondary" id="change color">Change color</button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p>
+          Difficulty:
+        </p>
+        <select id="difficulty" size="1">
+          <option value="easy">Easy</option>
+          <option value="hard">Hard</option>
+          <option value="impossible">Impossible</option>
+        </select>
+        <button   id="choose">Choose</button>
+      </div>
+      <div>
+        <button   id="shuffle pic">Shuffle</button>
+      </div>
+      <canvas id='holst'></canvas>
+      <canvas id='aux_holst' style='display: none'></canvas>
+      <img id="orig" style="display: none">
+    </div>
+  </div>
+  <div id='win_table' style="display: none">
+    <div></div>
+    <button id='restart'>Restart</button>
+  </div>
+</body>
+<script type="text/javascript" src="../static/scripts/main.js"></script>
+<script type="text/javascript" src="../static/scripts/rgb-slider.js"></script>
+</html>
