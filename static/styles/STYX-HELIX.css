@@ -1,0 +1,50 @@
+.container {
+  width: 30%;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+p {
+  font-size: calc(25px + (50–25) * ((100vw — [min vw width]px) / ([max vw width] — [min vw width])));
+}
+input[type=range]{
+  width: 30%;
+}
+button{
+  width: 100%;
+  height: 100%;
+}
+fieldset{
+  border: none;
+}
+output{
+  display: inline-block;
+  min-width: 2.5em;
+}
+label, output{
+  padding: 2px 9px;
+  border-radius: 2px;
+  color: #000;
+  font-size: 1.1em;
+}
+label[for=r], output[for=r]{
+  background-color: #f00;
+}
+label[for=g], output[for=g]{
+  background-color: #0f0;
+}
+label[for=b], output[for=b]{
+  background-color: #00f;
+}
+#hex{
+  min-width: 4.5em;
+  font-size: 3em;
+  background: rgba(255,255,255,.3);
+}
