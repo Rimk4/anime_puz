@@ -1,23 +1,13 @@
-button {
-  font-size: inherit;
-}
-
-select {
-  font-size: inherit;
-}
-canvas {
-  max-width: 100%;
-  max-height: 100%;
-}
 body{
   align-items: center;
-  font-size: 2vw;
 }
-
+#orig, #holst {
+  width: 300px;
+  height: auto;
+}
 input[type=range]{
-  width: 30%;
+  width: 100%;
 }
-
 fieldset{
   border: none;
 }
@@ -39,9 +29,4 @@ label[for=g], output[for=g]{
 }
 label[for=b], output[for=b]{
   background-color: #00f;
-}
-#hex{
-  min-width: 4.5em;
-  font-size: 3em;
-  background: rgba(255,255,255,.3);
 }
