@@ -11,12 +11,12 @@
   </div>
   <div id="menu" style="display: none">
     <div>Picture's link address: <a id="url" href="{{ url_ }}">{{ url_ }}</a></div>
-    <div style="display: inline-flex;">
-      <div>
+    <div>
+      <div class="menu">
         <p id="counter_clicks">Clicks: 0</p>
         <button id="show orig">Show original</button>
         <div>
-          <button   id="num">Show numbers</button>
+          <button id="num">Show numbers</button>
           <div id="rgb-slider" style="display: none">
             <fieldset>
               <label for="r">R</label>
@@ -38,10 +38,6 @@
 
             <output id="hex" style="display: none">#000000</output>
           </div>
-          <div class="colors_act" style="display: none">
-            <button id="save color">Save Color</button>
-            <button id="change color">Change color</button>
-          </div>
         </div>
         <p>
           Difficulty:
@@ -51,14 +47,13 @@
           <option value="hard">Hard</option>
           <option value="impossible">Impossible</option>
         </select>
-        <button id="choose">Choose</button>
         <button id="shuffle pic">Shuffle</button>
         <div id='win_table' style="display: none">
           <div></div>
           <button id='restart'>Restart</button>
         </div>
       </div>
-      <div>
+      <div class="gamespace">
         <canvas id='holst'></canvas>
         <canvas id='aux_holst' style='display: none'></canvas>
         <img id="orig" style="display: none">
@@ -67,5 +62,4 @@
   </div>
 </body>
 <script type="text/javascript" src="../static/scripts/main.js"></script>
-<script type="text/javascript" src="../static/scripts/rgb-slider.js"></script>
 </html>
